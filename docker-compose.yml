@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    environment:
+      RABBITMQ_DEFAULT_VHOST: "master"
+      RABBITMQ_DEFAULT_USER: "dev"
+      RABBITMQ_DEFAULT_PASS: "dev"
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+    ports:
+      - 8090:15672
+      - 5672:5672
+
+volumes:
+  rabbitmq:

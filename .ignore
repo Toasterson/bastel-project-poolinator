@@ -1,0 +1,3 @@
+dotnet-sample-function/bin
+dotnet-sample-function/obj
+*.wasm
